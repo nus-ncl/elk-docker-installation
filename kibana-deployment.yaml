@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert --volumes hostPath
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: kibana
+  name: kibana
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: kibana
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert --volumes hostPath
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/elk: "true"
+        io.kompose.service: kibana
+    spec:
+      containers:
+      - env:
+        - name: ELASTIC_PASSWORD
+        image: kibana
+        imagePullPolicy: ""
+        name: kibana
+        ports:
+        - containerPort: 5601
+        resources: {}
+        volumeMounts:
+        - mountPath: /usr/share/kibana/config/kibana.yml
+          name: kibana-hostpath0
+          readOnly: true
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - hostPath:
+          path: /home/kmz/Code/NCL/ncl-elk/kibana/config/kibana.yml
+        name: kibana-hostpath0
+status: {}
