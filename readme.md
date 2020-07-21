@@ -1,8 +1,8 @@
 # ELK for NCL - Docker Setup
 
-![](https://img.shields.io/badge/docker-ready-brightgreen)![](https://img.shields.io/badge/docker--compose-ready-brightgreen)![](https://img.shields.io/badge/kubectl-ready-brightgreen)
+![](https://img.shields.io/badge/docker-ready-brightgreen) ![](https://img.shields.io/badge/docker--compose-ready-brightgreen)![](https://img.shields.io/badge/kubectl-ready-brightgreen) 
 
-![](https://img.shields.io/badge/elastic-kibana-EC407A)![](https://img.shields.io/badge/elastic-elasticsearch-4CAF50)![](https://img.shields.io/badge/elastic-logstash-FFEB3B)
+![](https://img.shields.io/badge/elastic-kibana-EC407A) ![](https://img.shields.io/badge/elastic-elasticsearch-4CAF50) ![](https://img.shields.io/badge/elastic-logstash-FFEB3B) 
 
 
 
