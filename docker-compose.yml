@@ -41,8 +41,8 @@ services:
         target: /usr/share/logstash/pipeline
         read_only: true
       - type: bind
-        source: ./logstash/jdbc/mysql-connector-java-8.0.20.jar
-        target: /usr/share/java/mysql-connector-java-8.0.20.jar
+        source: ./logstash/jdbc/mysql-connector-java.jar
+        target: /usr/share/java/mysql-connector-java.jar
         read_only: true
     ports:
       - "5000:5000/tcp"
