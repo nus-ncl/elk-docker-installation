@@ -9,4 +9,4 @@ FROM docker.elastic.co/logstash/logstash:${ELK_VERSION}
 # Kompose workaround
 COPY config /usr/share/logstash/config/
 COPY pipeline /usr/share/logstash/pipeline/
-COPY jdbc/mysql-connector-java-8.0.20.jar /usr/share/java/mysql-connector-java-8.0.20.jar
+COPY jdbc/mysql-connector-java.jar /usr/share/java/mysql-connector-java.jar
